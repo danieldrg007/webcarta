@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Carta – Medianoche</title>
+
+  <!-- Tipos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="letter.css"/>
+</head>
+<body>
+  <!-- Fondo aurora + estrellas -->
+  <div class="bg" aria-hidden="true">
+    <canvas id="stars" aria-hidden="true"></canvas>
+    <div class="aurora"></div>
+  </div>
+
+  <main class="wrap">
+    <article class="glass" aria-label="Carta">
+      <header class="head">
+        <div class="rose" aria-hidden="true">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rosa">
+            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 50 C 26 46, 30 42, 34 36" />
+              <path d="M28 42 q6 -6 14 0 q-8 8 -14 0z" />
+              <path d="M40 24 q4 -6 12 -2 q-2 10 -12 8" />
+              <path d="M40 24 q-4 -6 -12 -2 q2 10 12 8" />
+              <circle cx="40" cy="24" r="8"/>
+            </g>
+          </svg>
+        </div>
+        <h1 class="title">Mi amor</h1>
+        <div class="sub">Para <strong id="who">mi vida</strong></div>
+      </header>
+
+     <section class="letter">
+  <div class="inline-controls">
+    <button id="revealBtn" class="btn" type="button" aria-label="Leer más">Leer más</button>
+  </div>
+
+  <p class="reveal">
+    A veces la noche guarda lo que el día no alcanza a decir. Hoy quiero decírtelo con calma:
+    <em>gracias por existir</em>, por quedarte, por hacer sencillo lo imposible.
+  </p>
+  <p class="reveal">
+    En tu risa aprendí a descansar; en tu mirada, la certeza de hogar. Cada minuto contigo
+    vuelve suave el mundo y más lento el reloj.
+  </p>
+  <p class="reveal callout">
+    Al encontrarte, hallé mi <strong>tesoro</strong>: tu paz, tu ternura y esa manera de
+    volver eterno lo simple.
+  </p>
+  <p class="reveal">
+    Prometo cuidar lo nuestro con paciencia, celebrar tus victorias, sostener tus días grises
+    y sembrar presente a tu lado. Amarte no es un rumbo: es la dirección.
+  </p>
+</section>
+
+      <footer class="foot">
+  <div class="signature" aria-label="Firma">
+    <svg viewBox="0 0 600 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Firma caligrafiada">
+      <path id="sig"
+        d="M20,90 C60,40 110,40 150,90 S230,140 270,90
+           M290,90 C320,60 350,60 380,90
+           M400,90 C430,50 480,50 520,90
+           M530,90 C545,80 560,80 580,90"
+        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+    </svg>
+    <div class="name">Siempre tuyo.</div>
+  </div>
+</footer>
+
+      
+    </article>
+  </main>
+
+  <!-- Cargar primero main.js para asegurar el nombre -->
+  <script src="main.js" defer></script>
+  <!-- js.js controlará el reveal/estrellas (sin cambiar fondo) -->
+  <script src="js.js" defer></script>
+</body>
+</html>
